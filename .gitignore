@@ -1,0 +1,27 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Go template
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
+.glide/
+
+将删除 .gitignore
+将删除 .idea/
+将删除 core.iml
+
+app/app*
+app/.idea
+client/client*
+client/.idea
+
+.idea

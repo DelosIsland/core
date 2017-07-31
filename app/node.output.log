@@ -1,0 +1,152 @@
+2017-07-27T13:15:37.722+0800	DEBUG	app/main.go:50	Starting zap! Have your fun!
+2017-07-27T13:15:46.354+0800	DEBUG	app/main.go:50	Starting zap! Have your fun!
+2017-07-27T13:16:00.422+0800	DEBUG	app/main.go:50	Starting zap! Have your fun!
+2017-07-27T13:16:51.399+0800	DEBUG	app/main.go:50	Starting zap! Have your fun!
+2017-07-27T13:16:53.034+0800	INFO	server/http_server.go:36	Starting RPC HTTP server on tcp socket 0.0.0.0:46657
+2017-07-27T13:18:09.864+0800	ERROR	server/http_server.go:94	Panic in RPC HTTP handler	{"error": "runtime error: invalid memory address or nil pointer dereference", "stack": "goroutine 207 [running]:\nruntime/debug.Stack(0x9a96c0, 0xc420481c20, 0xdb8550)\n\t/home/vagrant/go/src/runtime/debug/stack.go:24 +0x79\ngithub.com/DelosIsland/core/module/lib/go-rpc/server.RecoverAndLogHandler.func1.1(0xc4200cfba0, 0xc4204566c0, 0xed10b6e91, 0xc4338b28b7, 0xdc7560, 0xc42006c200)\n\t/home/vagrant/gohome/src/github.com/DelosIsland/core/module/lib/go-rpc/server/http_server.go:94 +0x8d8\npanic(0x94e660, 0xdb8550)\n\t/home/vagrant/go/src/runtime/panic.go:489 +0x2cf\ngithub.com/DelosIsland/core/app/node.(*rpcHandler).BroadcastTx(0xc42045e220, 0xc422556133, 0xb, 0xc421905d40, 0x18a, 0x18a, 0x0, 0xc421d05410, 0x41214c)\n\t/home/vagrant/gohome/src/github.com/DelosIsland/core/app/node/routes.go:268 +0x45\ngithub.com/DelosIsland/core/app/node.(*rpcHandler).BroadcastTx-fm(0xc422556133, 0xb, 0xc421905d40, 0x18a, 0x18a, 0x0, 0x0, 0x0)\n\t/home/vagrant/gohome/src/github.com/DelosIsland/core/app/node/routes.go:73 +0x5c\nreflect.Value.call(0x947680, 0xc420433b50, 0x13, 0x9e1cb3, 0x4, 0xc421906930, 0x2, 0x2, 0x0, 0xc4200721a0, ...)\n\t/home/vagrant/go/src/reflect/value.go:434 +0x91f\nreflect.Value.Call(0x947680, 0xc420433b50, 0x13, 0xc421906930, 0x2, 0x2, 0x2, 0x0, 0x0)\n\t/home/vagrant/go/src/reflect/value.go:302 +0xa4\ngithub.com/DelosIsland/core/module/lib/go-rpc/server.makeJSONRPCHandler.func1(0xd88c20, 0xc4200cfba0, 0xc42006c200)\n\t/home/vagrant/gohome/src/github.com/DelosIsland/core/module/lib/go-rpc/server/handlers.go:134 +0x23f\nnet/http.HandlerFunc.ServeHTTP(0xc420f41320, 0xd88c20, 0xc4200cfba0, 0xc42006c200)\n\t/home/vagrant/go/src/net/http/server.go:1942 +0x44\nnet/http.(*ServeMux).ServeHTTP(0xc4204831d0, 0xd88c20, 0xc4200cfba0, 0xc42006c200)\n\t/home/vagrant/go/src/net/http/server.go:2238 +0x130\ngithub.com/DelosIsland/core/module/lib/go-rpc/server.RecoverAndLogHandler.func1(0xd89020, 0xc422476d20, 0xc42006c200)\n\t/home/vagrant/gohome/src/github.com/DelosIsland/core/module/lib/go-rpc/server/http_server.go:111 +0x374\nnet/http.HandlerFunc.ServeHTTP(0xc420f41400, 0xd89020, 0xc422476d20, 0xc42006c200)\n\t/home/vagrant/go/src/net/http/server.go:1942 +0x44\nnet/http.serverHandler.ServeHTTP(0xc4200a8fd0, 0xd89020, 0xc422476d20, 0xc42006c200)\n\t/home/vagrant/go/src/net/http/server.go:2568 +0x92\nnet/http.(*conn).serve(0xc4204685a0, 0xd898e0, 0xc420f3c0c0)\n\t/home/vagrant/go/src/net/http/server.go:1825 +0x612\ncreated by net/http.(*Server).Serve\n\t/home/vagrant/go/src/net/http/server.go:2668 +0x2ce\n"}
+go.uber.org/zap.Stack
+	/home/vagrant/gohome/src/go.uber.org/zap/field.go:190
+go.uber.org/zap.(*Logger).check
+	/home/vagrant/gohome/src/go.uber.org/zap/logger.go:273
+go.uber.org/zap.(*Logger).Check
+	/home/vagrant/gohome/src/go.uber.org/zap/logger.go:146
+go.uber.org/zap.(*SugaredLogger).log
+	/home/vagrant/gohome/src/go.uber.org/zap/sugar.go:224
+go.uber.org/zap.(*SugaredLogger).Errorw
+	/home/vagrant/gohome/src/go.uber.org/zap/sugar.go:182
+github.com/DelosIsland/core/module/lib/go-rpc/server.RecoverAndLogHandler.func1.1
+	/home/vagrant/gohome/src/github.com/DelosIsland/core/module/lib/go-rpc/server/http_server.go:94
+runtime.call64
+	/home/vagrant/go/src/runtime/asm_amd64.s:515
+runtime.gopanic
+	/home/vagrant/go/src/runtime/panic.go:489
+runtime.panicmem
+	/home/vagrant/go/src/runtime/panic.go:63
+runtime.sigpanic
+	/home/vagrant/go/src/runtime/signal_unix.go:290
+github.com/DelosIsland/core/app/node.(*rpcHandler).BroadcastTx
+	/home/vagrant/gohome/src/github.com/DelosIsland/core/app/node/routes.go:268
+github.com/DelosIsland/core/app/node.(*rpcHandler).BroadcastTx-fm
+	/home/vagrant/gohome/src/github.com/DelosIsland/core/app/node/routes.go:73
+runtime.call64
+	/home/vagrant/go/src/runtime/asm_amd64.s:515
+reflect.Value.call
+	/home/vagrant/go/src/reflect/value.go:434
+reflect.Value.Call
+	/home/vagrant/go/src/reflect/value.go:302
+github.com/DelosIsland/core/module/lib/go-rpc/server.makeJSONRPCHandler.func1
+	/home/vagrant/gohome/src/github.com/DelosIsland/core/module/lib/go-rpc/server/handlers.go:134
+net/http.HandlerFunc.ServeHTTP
+	/home/vagrant/go/src/net/http/server.go:1942
+net/http.(*ServeMux).ServeHTTP
+	/home/vagrant/go/src/net/http/server.go:2238
+github.com/DelosIsland/core/module/lib/go-rpc/server.RecoverAndLogHandler.func1
+	/home/vagrant/gohome/src/github.com/DelosIsland/core/module/lib/go-rpc/server/http_server.go:111
+net/http.HandlerFunc.ServeHTTP
+	/home/vagrant/go/src/net/http/server.go:1942
+net/http.serverHandler.ServeHTTP
+	/home/vagrant/go/src/net/http/server.go:2568
+net/http.(*conn).serve
+	/home/vagrant/go/src/net/http/server.go:1825
+2017-07-27T13:18:09.865+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:53282"}
+2017-07-27T13:18:57.036+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "get_account_amount", "args": [{"flag":408}], "returns": [{"flag":153},{"flag":148}]}
+2017-07-27T13:18:57.036+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:53294"}
+2017-07-27T13:19:47.120+0800	ERROR	server/http_server.go:94	Panic in RPC HTTP handler	{"error": "runtime error: invalid memory address or nil pointer dereference", "stack": "goroutine 573 [running]:\nruntime/debug.Stack(0x9a96c0, 0xc4201f7e00, 0xdb8550)\n\t/home/vagrant/go/src/runtime/debug/stack.go:24 +0x79\ngithub.com/DelosIsland/core/module/lib/go-rpc/server.RecoverAndLogHandler.func1.1(0xc42208c660, 0xc4204566c0, 0xed10b6ef3, 0xc4072c86f2, 0xdc7560, 0xc42206b900)\n\t/home/vagrant/gohome/src/github.com/DelosIsland/core/module/lib/go-rpc/server/http_server.go:94 +0x8d8\npanic(0x94e660, 0xdb8550)\n\t/home/vagrant/go/src/runtime/panic.go:489 +0x2cf\ngithub.com/DelosIsland/core/app/node.(*rpcHandler).BroadcastTx(0xc42045e220, 0xc42208a923, 0xb, 0xc420243d40, 0x18a, 0x18a, 0xc421c2b450, 0xc421c2b410, 0x41214c)\n\t/home/vagrant/gohome/src/github.com/DelosIsland/core/app/node/routes.go:268 +0x45\ngithub.com/DelosIsland/core/app/node.(*rpcHandler).BroadcastTx-fm(0xc42208a923, 0xb, 0xc420243d40, 0x18a, 0x18a, 0x0, 0x0, 0x0)\n\t/home/vagrant/gohome/src/github.com/DelosIsland/core/app/node/routes.go:73 +0x5c\nreflect.Value.call(0x947680, 0xc420433b50, 0x13, 0x9e1cb3, 0x4, 0xc42205b4a0, 0x2, 0x2, 0x0, 0xc4200721a0, ...)\n\t/home/vagrant/go/src/reflect/value.go:434 +0x91f\nreflect.Value.Call(0x947680, 0xc420433b50, 0x13, 0xc42205b4a0, 0x2, 0x2, 0x2, 0x0, 0x0)\n\t/home/vagrant/go/src/reflect/value.go:302 +0xa4\ngithub.com/DelosIsland/core/module/lib/go-rpc/server.makeJSONRPCHandler.func1(0xd88c20, 0xc42208c660, 0xc42206b900)\n\t/home/vagrant/gohome/src/github.com/DelosIsland/core/module/lib/go-rpc/server/handlers.go:134 +0x23f\nnet/http.HandlerFunc.ServeHTTP(0xc420f41320, 0xd88c20, 0xc42208c660, 0xc42206b900)\n\t/home/vagrant/go/src/net/http/server.go:1942 +0x44\nnet/http.(*ServeMux).ServeHTTP(0xc4204831d0, 0xd88c20, 0xc42208c660, 0xc42206b900)\n\t/home/vagrant/go/src/net/http/server.go:2238 +0x130\ngithub.com/DelosIsland/core/module/lib/go-rpc/server.RecoverAndLogHandler.func1(0xd89020, 0xc422044a80, 0xc42206b900)\n\t/home/vagrant/gohome/src/github.com/DelosIsland/core/module/lib/go-rpc/server/http_server.go:111 +0x374\nnet/http.HandlerFunc.ServeHTTP(0xc420f41400, 0xd89020, 0xc422044a80, 0xc42206b900)\n\t/home/vagrant/go/src/net/http/server.go:1942 +0x44\nnet/http.serverHandler.ServeHTTP(0xc4200a8fd0, 0xd89020, 0xc422044a80, 0xc42206b900)\n\t/home/vagrant/go/src/net/http/server.go:2568 +0x92\nnet/http.(*conn).serve(0xc4224679a0, 0xd898e0, 0xc422068f40)\n\t/home/vagrant/go/src/net/http/server.go:1825 +0x612\ncreated by net/http.(*Server).Serve\n\t/home/vagrant/go/src/net/http/server.go:2668 +0x2ce\n"}
+go.uber.org/zap.Stack
+	/home/vagrant/gohome/src/go.uber.org/zap/field.go:190
+go.uber.org/zap.(*Logger).check
+	/home/vagrant/gohome/src/go.uber.org/zap/logger.go:273
+go.uber.org/zap.(*Logger).Check
+	/home/vagrant/gohome/src/go.uber.org/zap/logger.go:146
+go.uber.org/zap.(*SugaredLogger).log
+	/home/vagrant/gohome/src/go.uber.org/zap/sugar.go:224
+go.uber.org/zap.(*SugaredLogger).Errorw
+	/home/vagrant/gohome/src/go.uber.org/zap/sugar.go:182
+github.com/DelosIsland/core/module/lib/go-rpc/server.RecoverAndLogHandler.func1.1
+	/home/vagrant/gohome/src/github.com/DelosIsland/core/module/lib/go-rpc/server/http_server.go:94
+runtime.call64
+	/home/vagrant/go/src/runtime/asm_amd64.s:515
+runtime.gopanic
+	/home/vagrant/go/src/runtime/panic.go:489
+runtime.panicmem
+	/home/vagrant/go/src/runtime/panic.go:63
+runtime.sigpanic
+	/home/vagrant/go/src/runtime/signal_unix.go:290
+github.com/DelosIsland/core/app/node.(*rpcHandler).BroadcastTx
+	/home/vagrant/gohome/src/github.com/DelosIsland/core/app/node/routes.go:268
+github.com/DelosIsland/core/app/node.(*rpcHandler).BroadcastTx-fm
+	/home/vagrant/gohome/src/github.com/DelosIsland/core/app/node/routes.go:73
+runtime.call64
+	/home/vagrant/go/src/runtime/asm_amd64.s:515
+reflect.Value.call
+	/home/vagrant/go/src/reflect/value.go:434
+reflect.Value.Call
+	/home/vagrant/go/src/reflect/value.go:302
+github.com/DelosIsland/core/module/lib/go-rpc/server.makeJSONRPCHandler.func1
+	/home/vagrant/gohome/src/github.com/DelosIsland/core/module/lib/go-rpc/server/handlers.go:134
+net/http.HandlerFunc.ServeHTTP
+	/home/vagrant/go/src/net/http/server.go:1942
+net/http.(*ServeMux).ServeHTTP
+	/home/vagrant/go/src/net/http/server.go:2238
+github.com/DelosIsland/core/module/lib/go-rpc/server.RecoverAndLogHandler.func1
+	/home/vagrant/gohome/src/github.com/DelosIsland/core/module/lib/go-rpc/server/http_server.go:111
+net/http.HandlerFunc.ServeHTTP
+	/home/vagrant/go/src/net/http/server.go:1942
+net/http.serverHandler.ServeHTTP
+	/home/vagrant/go/src/net/http/server.go:2568
+net/http.(*conn).serve
+	/home/vagrant/go/src/net/http/server.go:1825
+2017-07-27T13:19:47.120+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:53306"}
+2017-07-27T13:19:55.506+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "get_account_amount", "args": [{"flag":408}], "returns": [{"flag":153},{"flag":148}]}
+2017-07-27T13:19:55.506+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:53308"}
+2017-07-27T13:21:39.055+0800	DEBUG	app/main.go:50	Starting zap! Have your fun!
+2017-07-27T13:22:34.023+0800	DEBUG	app/main.go:50	Starting zap! Have your fun!
+2017-07-27T13:22:34.220+0800	INFO	server/http_server.go:36	Starting RPC HTTP server on tcp socket 0.0.0.0:46657
+2017-07-27T13:23:12.382+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "broadcast_tx_sync", "args": [{"flag":408},{"flag":407}], "returns": [{"flag":150},{"flag":148}]}
+2017-07-27T13:23:12.382+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:53326"}
+2017-07-27T13:23:24.186+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "get_account_amount", "args": [{"flag":408}], "returns": [{"flag":153},{"flag":148}]}
+2017-07-27T13:23:24.186+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:53328"}
+2017-07-27T13:24:38.051+0800	INFO	node/node.go:113	Stopping Node
+2017-07-27T14:28:55.577+0800	DEBUG	app/main.go:53	Starting zap! Have your fun!
+2017-07-27T14:28:57.228+0800	INFO	server/http_server.go:36	Starting RPC HTTP server on tcp socket 0.0.0.0:46657
+2017-07-27T14:29:02.324+0800	INFO	node/node.go:116	Stopping Node
+2017-07-27T14:31:00.391+0800	DEBUG	app/main.go:53	Starting zap! Have your fun!
+2017-07-27T14:31:02.607+0800	INFO	server/http_server.go:36	Starting RPC HTTP server on tcp socket 0.0.0.0:46657
+2017-07-27T14:31:03.675+0800	INFO	node/node.go:116	Stopping Node
+2017-07-27T14:31:06.237+0800	DEBUG	app/main.go:53	Starting zap! Have your fun!
+2017-07-27T14:31:06.752+0800	INFO	server/http_server.go:36	Starting RPC HTTP server on tcp socket 0.0.0.0:46657
+2017-07-27T14:31:59.934+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "get_account_amount", "args": [{"flag":408}], "returns": [{"flag":153},{"flag":148}]}
+2017-07-27T14:31:59.935+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:33572"}
+2017-07-27T14:32:18.681+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "get_account_amount", "args": [{"flag":408}], "returns": [{"flag":153},{"flag":148}]}
+2017-07-27T14:32:18.681+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:33646"}
+2017-07-27T14:47:21.044+0800	DEBUG	app/main.go:53	Starting zap! Have your fun!
+2017-07-27T14:48:58.408+0800	DEBUG	app/main.go:53	Starting zap! Have your fun!
+2017-07-27T14:48:58.742+0800	INFO	server/http_server.go:36	Starting RPC HTTP server on tcp socket 0.0.0.0:46657
+2017-07-27T14:49:03.137+0800	INFO	node/node.go:116	Stopping Node
+2017-07-27T15:00:45.743+0800	DEBUG	app/main.go:53	Starting zap! Have your fun!
+2017-07-27T15:00:47.907+0800	INFO	server/http_server.go:36	Starting RPC HTTP server on tcp socket 0.0.0.0:46657
+2017-07-27T15:00:48.738+0800	INFO	node/node.go:116	Stopping Node
+2017-07-27T15:33:58.186+0800	DEBUG	app/main.go:53	Starting zap! Have your fun!
+2017-07-27T15:34:00.612+0800	INFO	server/http_server.go:36	Starting RPC HTTP server on tcp socket 0.0.0.0:46657
+2017-07-27T15:34:48.537+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "broadcast_tx_sync", "args": [{"flag":408},{"flag":407}], "returns": [{"flag":150},{"flag":148}]}
+2017-07-27T15:34:48.537+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 5, "remoteAddr": "127.0.0.1:40642"}
+2017-07-27T15:35:14.433+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "get_account_amount", "args": [{"flag":408}], "returns": [{"flag":153},{"flag":148}]}
+2017-07-27T15:35:14.433+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:40644"}
+2017-07-27T15:35:32.636+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "get_account_amount", "args": [{"flag":408}], "returns": [{"flag":153},{"flag":148}]}
+2017-07-27T15:35:32.636+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:40646"}
+2017-07-27T15:35:55.222+0800	DEBUG	app/main.go:53	Starting zap! Have your fun!
+2017-07-27T15:35:56.346+0800	INFO	server/http_server.go:36	Starting RPC HTTP server on tcp socket 0.0.0.0:46657
+2017-07-27T15:36:28.423+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "get_account_amount", "args": [{"flag":408}], "returns": [{"flag":153},{"flag":148}]}
+2017-07-27T15:36:28.423+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:40652"}
+2017-07-27T15:36:35.327+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "get_account_amount", "args": [{"flag":408}], "returns": [{"flag":153},{"flag":148}]}
+2017-07-27T15:36:35.327+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:40654"}
+2017-07-27T15:36:41.897+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "get_account_amount", "args": [{"flag":408}], "returns": [{"flag":153},{"flag":148}]}
+2017-07-27T15:36:41.897+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:40656"}
+2017-07-27T15:36:59.383+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "get_account_amount", "args": [{"flag":408}], "returns": [{"flag":153},{"flag":148}]}
+2017-07-27T15:36:59.383+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:40658"}
+2017-07-27T15:37:16.622+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "get_account_amount", "args": [{"flag":408}], "returns": [{"flag":153},{"flag":148}]}
+2017-07-27T15:37:16.622+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:40660"}
+2017-07-27T15:37:25.592+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "get_account_amount", "args": [{"flag":408}], "returns": [{"flag":153},{"flag":148}]}
+2017-07-27T15:37:25.592+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:40662"}
+2017-07-27T15:37:35.460+0800	DEBUG	server/handlers.go:135	HTTPJSONRPC	{"method": "get_account_amount", "args": [{"flag":408}], "returns": [{"flag":153},{"flag":148}]}
+2017-07-27T15:37:35.460+0800	DEBUG	server/http_server.go:108	Served RPC HTTP response	{"method": "POST", "url": "/", "status": 200, "duration": 0, "remoteAddr": "127.0.0.1:40664"}

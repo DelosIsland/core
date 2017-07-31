@@ -1,0 +1,18 @@
+{
+	"app_hash": "",
+	"chain_id": "dngine-test",
+	"genesis_time": "0001-01-01T00:00:00.000Z",
+	"plugins": "specialop",
+	"validators": [
+		{
+			"amount": 100,
+			"is_ca": true,
+			"name": "",
+			"pub_key": [
+				1,
+				"F10AE17C70614C7B58B0F30AB3472FA9925CD7D00F0751C5ED3A937581C5E5BA"
+			],
+			"rpc": "tcp://0.0.0.0:46657"
+		}
+	]
+}
